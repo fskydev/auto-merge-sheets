@@ -72,6 +72,8 @@ Sub AutoMerge()
                         wbkSrcBook.Close SaveChanges:=False
                     Next
                     wbkCurSheet.columns("A:AI").AutoFit
+                    Application.ScreenUpdating = True
+                    Application.Calculation = xlCalculationAutomatic
                     'wbkCurSheet.Range("A1").EntireRow.Insert
                 End If
             Else
